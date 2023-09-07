@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/*
+Theme Name: Pilot'in
+Template: twentytwentythree
+Author: Hugo Robitaillie
+Author URI: https://pilotin.justhugo.fr
+Description: Theme créé pour le test de compétences de l'entreprise Pilot'in
+Version: 0.1.1694107573
+Updated: 2023-09-07 17:26:13
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body .wp-site-blocks {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@font-face {
+  font-family: Porpora;
+  src: url(../../fonts/Porpora-Regular\ 12.14.56.ttf);
+}
+*:not(p) {
+  font-family: "Outfit", sans-serif;
+}
+
+p {
+  font-family: "Porpora", sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px;
+}
+
+h2 {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+h3 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 58px;
+}
+
+h4 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+h5 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+h6 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  text-transform: none;
+}
+
+p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: #072038;
+}
+
+.primary {
+  color: #26C1D9;
+}
+
+.secondary {
+  color: #FD7762;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.button-primary {
+  background-color: #26C1D9;
+  border: 1px solid #26C1D9;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  transition: all 300ms ease-in-out;
+}
+.button-primary a {
+  color: #072038;
+  text-decoration: none;
+}
+.button-primary i {
+  max-width: 0;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.button-primary:hover {
+  gap: 8px;
+}
+.button-primary:hover i {
+  opacity: 1;
+  max-width: 25px;
+}
+
+.button-lg {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 li.mega-align-bottom-left.mega-toggle-on > a.mega-menu-link {
+  border-radius: 25px;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > a.mega-menu-link {
+  font-weight: 500;
+  box-sizing: content-box;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > .mega-sub-menu {
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  margin-top: 17px;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item > .mega-sub-menu:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #EDF6F7;
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 .megamenu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 .megamenu-item a {
+  padding: 2rem;
+  text-decoration: none;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 .megamenu-item a:hover {
+  background-color: #F0FDFF;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 .megamenu-item .megamenu-item-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 .megamenu-item p {
+  margin: 0;
+}
+#header #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 .megamenu-title h4 {
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */

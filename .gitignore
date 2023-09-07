@@ -1,0 +1,13 @@
+**/.DS_Store
+/.DS_Store
+wp-config.php
+.htaccess
+wp-content/uploads/*
+wp-content/plugins/
+wp-content/plugins/*
+wp-content/webp-express/*
+/wp-content/cache/**
+wp-content/cache/**
+wp-content/webp-express/log/*
+/wp-content/languages/*
+**/.htaccess
