@@ -1,0 +1,54 @@
+#header{
+    .banner{
+        p{
+            padding: 0;
+        }
+    }
+    .block-logos{
+        position: relative;
+        figure{
+            margin-top: 0;
+        }
+        .logo-{
+            &blanc{
+                display: block;
+                opacity: 1;
+            }
+            &bleu{
+                position: absolute;
+                opacity: 0;
+
+            }
+        }
+    }
+    transition: all 200ms ease-in;
+    &:hover{
+        .block-logos{
+            .logo-{
+                &blanc{
+                    opacity: 0;
+                }
+                &bleu{
+                    opacity: 1;
+                }
+            }
+        }
+        .wp-block-site-logo{
+            img{
+                filter: invert(9%) sepia(89%) saturate(961%) hue-rotate(182deg) brightness(89%) contrast(99%);
+            }
+        }
+        background-color: white;
+        #nav{
+            > nav{
+                > ul {
+                    > li{
+                        > a.mega-menu-link{
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

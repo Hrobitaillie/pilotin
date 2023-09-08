@@ -3,8 +3,6 @@
 wp-config.php
 .htaccess
 wp-content/uploads/*
-wp-content/plugins/
-wp-content/plugins/*
 wp-content/webp-express/*
 /wp-content/cache/**
 wp-content/cache/**
