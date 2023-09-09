@@ -5,3 +5,15 @@ $primary-700: #156B79;
 $secondary: #FD7762;
 $black: #072038;
 $gray-500: #A0BDC0;
+
+@mixin responsive{
+    @media screen and (max-width: 768px){
+        @content
+    }
+};
+
+@mixin max{
+    @media screen and (max-width: 1280px){
+        @content
+    }
+};

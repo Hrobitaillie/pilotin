@@ -74,6 +74,7 @@
     let slider = sliderReviews.querySelector(".review-slider")
     const articles = sliderReviews.querySelectorAll("article")
 
+    const videoContainer = sliderReviews.querySelector('.videos-container')
     const videos = sliderReviews.querySelectorAll("iframe")
 
     const arrows = sliderReviews.querySelectorAll(".arrow")
@@ -88,9 +89,17 @@
 
     function resizeArticles(){
         const sliderWidth = sliderReviews.offsetWidth
+        const videoContainerWidth = videoContainer.offsetWidth
 
         articles.forEach(element => {
-            element.style.maxWidth = (sliderWidth / 2) - 128 + "px"
+            if (window.offsetWidth > 798) {
+                element.style.maxWidth = (sliderWidth / 2) - 128 + "px"
+            }else {
+                element.style.maxWidth = (sliderWidth) - 64 + "px"
+            }
+        });
+        videos.forEach(element => {
+            element.style.width = videoContainerWidth + "px"
         });
     }
 

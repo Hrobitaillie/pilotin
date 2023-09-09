@@ -1,4 +1,4 @@
-#header{
+#header,#mobile-header{
     .banner{
         p{
             padding: 0;
@@ -51,4 +51,14 @@
             }
         }
     }
+}
+#mobile-header{
+        .country-selector.weglot-dropdown{
+            background-color: transparent;
+        }
+        &:hover{
+            .country-selector.weglot-dropdown{
+                color: $black;
+            }
+        }
 }

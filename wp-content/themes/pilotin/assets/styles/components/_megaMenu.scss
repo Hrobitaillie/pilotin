@@ -1,4 +1,4 @@
-#header{
+#header,#mobile-header{
     #mega-menu-wrap-max_mega_menu_1 {
         #mega-menu-max_mega_menu_1 {
             li.mega-align-bottom-left.mega-toggle-on {
@@ -84,5 +84,20 @@
         font-family: "FontAwesome";
         height: auto;
         color: white;
+    }
+}
+#mobile-header{
+    #mega-menu-wrap-max_mega_menu_1{
+        .mega-menu-toggle{
+            background: transparent;
+            &.mega-menu-open{
+                .mega-toggle-animated-inner{
+                        background-color: $black;
+                        &::before,&::after{
+                        background: $black;
+                    }
+                }
+            }
+        }
     }
 }

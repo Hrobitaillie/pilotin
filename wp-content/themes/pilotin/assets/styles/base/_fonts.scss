@@ -19,24 +19,40 @@ h1{
     font-style: normal;
     font-weight: 600;
     line-height: 72px;
+    @include responsive{
+        line-height: 43px;
+        font-size: 43px;
+    }
 }
 h2{
     font-size: 60px;
     font-style: normal;
     font-weight: 500;
     line-height: 60px;
+    @include responsive{
+        line-height: 35px;
+        font-size: 35px;
+    }
 }
 h3{
     font-size: 48px;
     font-style: normal;
     font-weight: 500;
     line-height: 58px;
+    @include responsive{
+        line-height: 24px;
+        font-size: 24px;
+    }
 }
 h4{
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
     line-height: 40px;
+    @include responsive{
+        line-height: 22px;
+        font-size: 22px;
+    }
 }
 
 h5{

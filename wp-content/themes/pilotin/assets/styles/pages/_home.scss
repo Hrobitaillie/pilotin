@@ -14,12 +14,10 @@
         text-transform: uppercase;
         white-space: nowrap;
         transform: rotate(-3.5deg);
-        mark{
-            font-size: 160px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 160px;
-            text-transform: uppercase;
+        @include responsive{
+            line-height: 45px;
+            font-size: 45px;
+            -webkit-text-stroke: 1px $primary;
         }
     }
 }
@@ -27,6 +25,9 @@
     position: relative;
     overflow-x: clip;
     margin-top: 86px;
+    @include responsive{
+        margin-top: 43px;
+    }
     &:before{
         content: "";
         height: 20vh;
@@ -41,36 +42,61 @@
         background-color: white;
     }
 }
-.chaos-section{
-    margin-bottom: calc(423px / 2 + 128px);
-    position: relative;
-    .picture-divider{
-        max-width: 1062px;
-        max-height: 423px;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 50%);
-    }
-    &-first{
-        > div:first-child{
-            z-index: 1;
-            position: relative;
+.diagonal-spacer{
+    
+    &.chaos-section{
+        position: relative;
+        margin-bottom: calc(423px / 2 + 128px);
+        padding-bottom: calc(423px / 2 + 128px);
+
+        @include responsive{
+            padding-bottom: 20vw;
+            margin-bottom: 20vw;
         }
-        .paralax{
-            top: 0;
-            right: 0;
+        @include max{
+            padding-bottom: 25vw;
+            margin-bottom: 25vw;
+        }
+        .picture-divider{
+            max-width: 1062px;
+            max-height: 423px;
+            width: 100%;
+            height: 100%;
             position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            @include responsive{
+                height: unset;
+                width: 80%;
+            }
+        }
+        .chaos-section-first{
+            @include responsive{
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            > div:first-child{
+                z-index: 1;
+                position: relative;
+            }
+            .paralax{
+                top: 0;
+                right: 0;
+                position: absolute;
+            }
         }
     }
+    
 }
 .icon{
     &::before{
         font-family: "FontAwesome";
         height: auto;
         margin-right: 24px;
+        @include responsive{
+            margin-right: 8px;
+        }
     }
     &.icon-chart{
         &::before{
@@ -142,25 +168,75 @@
     }
 }
 
-.challenge-card.propilot{
-    overflow: hidden;
-    > div{
-        position: relative;
-        &:first-child{
-            z-index: 2;
+.challenge-card{
+    @include responsive{
+        flex-direction: column-reverse;
+    }
+    .button{
+        @include responsive{
+            margin: 2rem auto;
         }
     }
-    .half-circle{
-        position: absolute;
-        bottom: 50%;
-        transform: translateY(50%);
-        z-index: 0;
-    }
-    .mockup{
+    &.propilot{
+        overflow: hidden;
         position: relative;
+        @include responsive{
+            flex-direction: column;
+        }
+        > div{
+            &:first-child{
+                z-index: 2;
+            }
+        }
+        .half-circle{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 40%;
+            z-index: 0;
+            @include responsive{
+                top: 100%;
+                transform: translateY(-50%);
+            }
+        }
+        .mockup{
+            position: relative;
+            @include responsive{
+            }
+        }
     }
 }
 
 .trustSection{
     margin-top: 86*2px;
+    @include responsive{
+        margin-top: 86px;
+
+        .trust-header{
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.blog-section{
+    @include responsive{
+        padding: 0 1rem;
+        margin-top: 50px !important;
+    }
+}
+
+#call-to-action{
+    > div{
+        > div:last-child{
+            @include responsive{
+                padding: 0 1rem 1rem !important;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+    }
 }

@@ -2,6 +2,11 @@ footer{
     position: relative;
     margin-top: 0;
     overflow: hidden;
+    @include responsive{
+        > div{
+            padding: 24px 1rem !important;
+        }
+    }
     .footer-menu{
         position: relative;
         z-index: 2;
@@ -54,6 +59,11 @@ footer{
                 }
             }
         }
+        @include responsive{
+            ul,p{
+                margin-top: 5px;
+            }
+        }
     }
     .footer-paralax{
         position: absolute;
@@ -63,6 +73,16 @@ footer{
     .footer-cookies{
         position: relative;
         z-index: 2;
+        @include responsive{
+            > div{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                *{
+                    text-align: center;
+                }
+            }
+        }
         a{
             text-decoration: none;
             
