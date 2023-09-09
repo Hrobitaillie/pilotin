@@ -24,3 +24,22 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 defined( 'CHLD_THM_CFG_IGNORE_PARENT' ) or define( 'CHLD_THM_CFG_IGNORE_PARENT', TRUE );
 
 // END ENQUEUE PARENT ACTION
+
+
+add_action( 'wp_enqueue_scripts', 'my_scripts' );
+function my_scripts() {
+    wp_enqueue_script('mon-script-child', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0', true);
+    wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', array(), '3.9.1', true );
+    wp_enqueue_script( 'scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js', array( 'gsap' ), '3.9.1', true );
+}
+
+function max_title_length( $title ) {
+    $max = 100;
+    if( strlen( $title ) > $max ) {
+        return substr( $title, 0, $max ). "…";
+    } else {
+        return $title;
+    }
+}
+     
+add_filter( 'the_title', 'max_title_length');
